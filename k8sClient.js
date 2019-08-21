@@ -3,6 +3,11 @@ const spawn = (cmd) => {
     return (require('child_process').execSync(cmd, { stderr : 'ignore'})).toString('utf8');
 };
 
+const spawnAsync = (cmd) => {
+    console.log(cmd);
+    return (require('child_process').exec(cmd, { stderr : 'ignore'})).toString('utf8');
+};
+
 class K8SClient {
 
     getClusters () {
@@ -31,7 +36,7 @@ class K8SClient {
 
     connect({cluster, namespace, pod, localPort, remotePort}) {
         this.getClusterContext({cluster});
-        return (spawn(`kubectl port-forward -n ${namespace} ${pod} ${localPort}:${remotePort}`));
+        return (spawnAsync(`kubectl port-forward -n ${namespace} ${pod} ${localPort}:${remotePort}`));
     }
 
     parseJson(str) {
