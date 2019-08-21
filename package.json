@@ -1,0 +1,10 @@
+{
+  "name": "captain-ahab",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.16.4",
+    "arupex-logger": "^1.0.5",
+    "hyper-request": "^3.2.0",
+    "get-port": "^5.0.0"
+  }
+}
