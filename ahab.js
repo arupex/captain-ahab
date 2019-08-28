@@ -36,4 +36,8 @@ routes.forEach(route => {
    });
 });
 
-app.listen(process.env.PORT || 20000);
+let port = process.env.PORT || 20000;
+
+app.listen(port);
+
+module.exports = {port};
