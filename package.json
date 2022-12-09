@@ -5,7 +5,7 @@
     "captain-ahab": "bin/ahab.js"
   },
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "arupex-logger": "^1.0.5",
     "hyper-request": "^3.2.0",
     "get-port": "^5.0.0",
